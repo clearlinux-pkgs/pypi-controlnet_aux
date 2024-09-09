@@ -1,0 +1,49 @@
+From eff3f89abf30da2e8804684833a5b603566eb57d Mon Sep 17 00:00:00 2001
+From: "Brett T. Warden" <brett.t.warden@intel.com>
+Date: Mon, 9 Sep 2024 16:26:07 -0700
+Subject: [PATCH] Depend on full system opencv installation, not a headless
+ rebuild
+
+---
+ setup.py                                 | 4 ++--
+ src/controlnet_aux.egg-info/requires.txt | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/setup.py b/setup.py
+index b4b6bbdc98f1..dec8247c5a0b 100644
+--- a/setup.py
++++ b/setup.py
+@@ -82,7 +82,7 @@ _deps = [
+     "numpy",
+     "filelock",
+     "importlib_metadata",
+-    "opencv-python-headless",
++    "cv2",
+     "scipy",
+     "huggingface_hub",
+     "einops",
+@@ -168,7 +168,7 @@ install_requires = [
+     deps["importlib_metadata"],
+     deps["huggingface_hub"],
+     deps["scipy"],
+-    deps["opencv-python-headless"],
++    deps["cv2"],
+     deps["filelock"],
+     deps["numpy"],
+     deps["Pillow"],
+diff --git a/src/controlnet_aux.egg-info/requires.txt b/src/controlnet_aux.egg-info/requires.txt
+index f5d950c98bb3..3af535665a57 100644
+--- a/src/controlnet_aux.egg-info/requires.txt
++++ b/src/controlnet_aux.egg-info/requires.txt
+@@ -2,7 +2,7 @@ torch
+ importlib_metadata
+ huggingface_hub
+ scipy
+-opencv-python-headless
++cv2
+ filelock
+ numpy
+ Pillow
+-- 
+2.46.0
+
