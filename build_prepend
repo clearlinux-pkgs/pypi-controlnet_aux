@@ -1,0 +1,2 @@
+# Use the system's full OpenCV Python bindings; don't fail by looking for a stripped-down version.
+sed -i 's/opencv-python-headless/cv2/g' setup.py src/controlnet_aux.egg-info/requires.txt
