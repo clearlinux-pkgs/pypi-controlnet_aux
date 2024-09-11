@@ -18,7 +18,7 @@ index b4b6bbdc98f1..dec8247c5a0b 100644
      "filelock",
      "importlib_metadata",
 -    "opencv-python-headless",
-+    "cv2",
++    "opencv",
      "scipy",
      "huggingface_hub",
      "einops",
@@ -27,7 +27,7 @@ index b4b6bbdc98f1..dec8247c5a0b 100644
      deps["huggingface_hub"],
      deps["scipy"],
 -    deps["opencv-python-headless"],
-+    deps["cv2"],
++    deps["opencv"],
      deps["filelock"],
      deps["numpy"],
      deps["Pillow"],
@@ -40,7 +40,7 @@ index f5d950c98bb3..3af535665a57 100644
  huggingface_hub
  scipy
 -opencv-python-headless
-+cv2
++opencv
  filelock
  numpy
  Pillow
